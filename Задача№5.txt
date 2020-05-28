@@ -1,0 +1,11 @@
+import os
+path_to_file = 'C:/Users//test/Zadacha4/text.txt'
+file = open(path_to_file, "r")
+
+try:
+    if (os.stat(path_to_file).st_size > 0):
+        print("file opened successfully")
+    if (os.stat(path_to_file).st_size == 0):
+        print("Error: empty file")
+except OSError:
+    print("cannot open file")
